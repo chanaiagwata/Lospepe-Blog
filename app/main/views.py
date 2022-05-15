@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..models import User, Writer, Blogs, Comment
+from ..models import User, Blogs, Comment, Subscribers, Quotes
 
 
 #Views
