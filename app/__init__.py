@@ -1,3 +1,4 @@
+#Application factory
 from ensurepip import bootstrap
 from flask import Flask
 from flask_bootstrap import Bootstrap
@@ -13,6 +14,11 @@ def create_app(config_name):
     
     #Intialize flask extensions
     bootstrap.init_app(app)
-    #Initia views and forms
+    
+    #Registering blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+    
+    #Initialize views and forms
     
     return app
