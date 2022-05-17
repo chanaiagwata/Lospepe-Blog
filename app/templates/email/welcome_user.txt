@@ -1,3 +1,2 @@
-Hello {{user.username}}
 Welcome to ChanaiBlogs
 Thanks you for signing up for our application. You are now to welcomed to the family. Read and contribute to the blogs as much as you wish.

@@ -45,6 +45,18 @@ class Blogs(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     comments = db.relationship("Comment", backref = "blog", lazy = "dynamic")
     
+    def save_blog(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def delete_blog(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    @classmethod
+    def get_blog(cls,id):
+        blogs = Blogs.query.filter_by(blog_id=id).all()
+        return blogs
 #Comments
 class Comment(db.Model):
     __tablename__ = 'comments'
@@ -54,6 +66,23 @@ class Comment(db.Model):
     opinion_by = db.Column(db.String(255))
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     blog_id = db.Column(db.Integer,db.ForeignKey('blogs.id'))
+    
+    
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+        
+    @classmethod
+    def delete_comment(cls,id):
+        del_comment = Comment.query.filter_by(id=id).first()
+        db.session.delete(del_comment)
+        db.session.commit()
+        
+    @classmethod
+    def get_comments(cls,id):
+        comment = Comment.query.filter_by(blog_id = id).all()
+        return comment
+
     
 #Comments
 class Quotes:
