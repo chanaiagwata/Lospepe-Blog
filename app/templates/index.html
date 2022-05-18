@@ -8,6 +8,9 @@
                 </i><p class="text-center" style="font-size:20px; margin-top:50px;"><em>"{{quote.quote}}"</em></p>
                 <p class="text-center" style="font-size:20px;" >~{{quote.author}}</p>
             </div>
+            <div>
+                <button class="btn btn-info"><a class="nav-link" href="/blog/new_blog">Create Post</a><button>
+            <div>
         </div>
     </div>
 </div>
@@ -15,11 +18,11 @@
     <div class='row'>
         <div class = 'col'>
             <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                {% for blog in Blogs %}
+                {% for blog in blogs %}
                 <a href='{{url_for('main.blog', id = blog.id)}}'>
                     <h3>{{blog.blog_title}}</h3>
                     <h4>
-                        {{blog.blog_content | truncate (45)}}
+                        {{blog.blog_content | truncate (50)}}
                     </h4>
                 </a>
                 <p>

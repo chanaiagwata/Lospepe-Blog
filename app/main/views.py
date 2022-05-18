@@ -95,7 +95,7 @@ def profile(id):
                             user = user,
                             posts = posts)
     
-@main.route("/blog/new", methods = ["POST", "GET"])
+@main.route("/blog/new_blog", methods = ["POST", "GET"])
 @login_required
 def new_blog():
     blog_form = Blog_form()
