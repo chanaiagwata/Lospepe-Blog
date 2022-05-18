@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import (StringField, TextAreaField, SubmitField, SelectField)
+from wtforms import StringField, TextAreaField, SubmitField, SelectField
 from wtforms.validators import DataRequired
 
 
@@ -20,6 +20,6 @@ class UpdateBlog_form(FlaskForm):
     blog = TextAreaField("Type here:", validators=[DataRequired()])
     submit = SubmitField("Update")
 class Comment_form(FlaskForm):
-    comment = TextAreaField("Leave a Comment", validators=[DataRequired])
+    comment = TextAreaField("Leave a Comment", validators=[DataRequired()])
     comment_by = StringField("Name")
     submit = SubmitField("Comment")

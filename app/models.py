@@ -55,9 +55,8 @@ class Blogs(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_blog(cls,id):
-        blogs = Blogs.query.filter_by(blog_id=id).all()
-        return blogs
+    def get_blogs(cls):
+        return Blogs.query.order_by(Blogs.posted_at).all()
 #Comments
 class Comment(db.Model):
     __tablename__ = 'comments'

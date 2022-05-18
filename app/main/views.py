@@ -13,7 +13,7 @@ from ..requests import get_quote
 #Views
 @main.route("/", methods = ["GET","POST"])
 def index():
-    blog = Blogs.get_blog()
+    blog = Blogs.get_blogs()
     quote = get_quote()
      
     if request.method =="POST":

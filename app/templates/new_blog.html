@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="container">
+    <div class='row'>
+        <div class="col-lg-5">
+            <h3>Add a new blog post</h3>
+            <form>
+                {{blog_form.hidden_tag()}}
+                {{blog_form.title.label}} {{blog_form.title(class = "form-control")}}
+                <br>
+                {{blog_form.post.label}} {{blog_form.post(id = "summernote")}}
+                <br>
+                {{blog_form.submit(class = "btn btn-success")}}
+
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
