@@ -3,13 +3,13 @@
 ## By Chanai Agwata
 ### (MS School Project)
 
-* [Overall Description](https://github.com/chanaiagwata/Pitch-App#overall-project-description)
+* [Overall Description](https://github.com/chanaiagwata/Lospepe-Blog/tree/master#overall-project-description)
 
-* [Setup Instructions](https://github.com/chanaiagwata/Pitch-App#setup-instructions)
+* [Setup Instructions](https://github.com/chanaiagwata/Lospepe-Blog/edit/master/README.md#setup-instructions)
 
-* [License](https://github.com/chanaiagwata/Pitch-App#license)
+* [License](https://github.com/chanaiagwata/Lospepe-Blog/edit/master/README.md#license)
 
-* [Author's Info](https://github.com/chanaiagwata/Pitch-App#authors-info)
+* [Author's Info](https://github.com/chanaiagwata/Lospepe-Blog/edit/master/README.md#authors-info)
 
 ## Overall Project Description
 <p>This is a personal blogging website that allows users to create and share their opinions and other users can comment on them.</p>
